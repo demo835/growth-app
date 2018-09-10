@@ -1,0 +1,31 @@
+Growth
+
+This app allows you to track your child's health and growth milestones.
+
+!!! ---- MVP ---- !!!
+
+Bronze Level:
+-Full React front-end
+    -Child profile page
+        -Will show information on child's diagnosis, vaccinations, height, weight, etc.
+-Full Express back-end
+    -MongoDB
+    -Node.js
+    -CRUD
+
+Models:
+User {
+    children: Array
+}
+
+Child {
+    name: String
+    age: Number
+    height: Number
+    weight: Number
+    diagnosis: Array
+    vaccinations: Array
+}
+
+How will CRUD be implemented?
+User will be able to access child data (READ), add a diagnosis (CREATE), update child data (UPDATE), delete child data (DELETE)
