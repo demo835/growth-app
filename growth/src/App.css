@@ -1,0 +1,31 @@
+body {
+  background-color: #ffebec;
+}
+
+.App {
+  display: flex;
+}
+
+.card1 {
+  display: inline-block;
+  margin-top: 3%;
+  margin-left: 10%;
+  /* width: 20%; */
+  /* margin-left: 5%; */
+  /* margin-top: 5%; */
+}
+
+.card2 {
+  display: inline-block;
+  margin-top: 3%;
+  margin-left: 10%;
+  /* width: 20%; */
+  /* margin-left: 75%; */
+  /* margin-right: 5%; */
+}
+
+.card3 {
+  display: inline-block;
+  margin-top: 3%;
+  margin-left: 10%;
+}
