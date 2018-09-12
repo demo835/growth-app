@@ -4,6 +4,7 @@ import M from "materialize-css/dist/js/materialize.min.js"
 import Name from "./Name"
 import Conditions from "./Conditions"
 import Vaccinations from "./Vaccinations"
+import LogIn from "./LogIn"
 import './App.css';
 
 class App extends Component {
@@ -81,7 +82,8 @@ class App extends Component {
     return (
       <div className="App">
 
-        <Name patient={this.state.patients}/>
+        <LogIn />
+        {/* <Name patient={this.state.patients}/> */}
           {/* <div className="card card1">
             <div className="card-image waves-effect waves-block waves-light">
             <div className="card-content">
@@ -96,7 +98,7 @@ class App extends Component {
           </div>
         </div> */}
          
-        <Conditions conditions={this.state.patients}/>
+        {/* <Conditions conditions={this.state.patients}/> */}
               {/* <div className="card card2">
                 <div className="card-image">
                   <a href="/conditions/new" className="btn-floating halfway-fab waves-effect waves-light red"><i className="material-icons">add</i></a>
@@ -109,7 +111,7 @@ class App extends Component {
                 </div>
               </div> */}
         
-        <Vaccinations vaccinations={this.state.patients}/>
+        {/* <Vaccinations vaccinations={this.state.patients}/> */}
           {/* <div className="card card3">
                 <div className="card-image">
                   <a className="btn-floating halfway-fab waves-effect waves-light red"><i className="material-icons">add</i></a>
