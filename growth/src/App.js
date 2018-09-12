@@ -100,7 +100,14 @@ class App extends Component {
          <Switch>
             <Route exact path="/" component={LogIn} />
             <Route exact path="/signup" component={SignUp} />
-            <Route exact path="/show" component={Show} />
+            <Route
+              exact
+              path="/show"
+              render={props => {
+                return <Show {...props} />;
+              }}
+            />
+            {/* <Route exact path="/show" component={Show} /> */}
             {/* <Route
               exact
               path="/show"

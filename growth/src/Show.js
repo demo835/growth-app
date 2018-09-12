@@ -7,8 +7,8 @@ import DropDown from "./DropDown"
 import "./Show.css"
 
 class Show extends Component {
-    constructor() {
-        super()
+    constructor(props) {
+        super(props)
 
         this.state = {
             patient: null,
