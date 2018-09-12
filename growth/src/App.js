@@ -11,6 +11,8 @@ import Conditions from "./Conditions"
 import Vaccinations from "./Vaccinations"
 import LogIn from "./LogIn"
 import SignUp from "./SignUp"
+import DropDown from "./DropDown"
+import Show from "./Show"
 import './App.css';
 
 class App extends Component {
@@ -18,8 +20,9 @@ class App extends Component {
     super();
 
     this.state = {
-      patients: null
-    };
+      patients: null,
+      user: null
+    }
   }
 
   componentDidMount() {
@@ -33,6 +36,12 @@ class App extends Component {
       // console.log("this.state.patients.diagnosis", this.state.patients.diagnosis)
       // console.log(this.state.patients.diagnosis[0].condition)
 
+    
+    })
+
+    axios.get("http://localhost:3001/user").then(data2 => {
+      this.setState({ user: data2.data })
+    })
     //   let elems = document.querySelectorAll('.fixed-action-btn');
     // let instances = M.FloatingActionButton.init(elems, options);
     
@@ -45,7 +54,6 @@ class App extends Component {
     // console.log("collapsible", elem)
     var instance = M.Collapsible.init(elem)
     // .Collapsible.getInstance(elem);
-    })
   }
 
   // componentDidMount() {
@@ -85,13 +93,15 @@ class App extends Component {
     //   return (<p>{x.vaccine}</p>)
     // })
 
+      console.log("this.state.user is", this.state.user)
+
     return (
       <div className="App">
          <Switch>
             <Route exact path="/" component={LogIn} />
             <Route exact path="/signup" component={SignUp} />
-            {/* <Route exact path="/show" component={Name} /> */}
-            <Route
+            <Route exact path="/show" component={Show} />
+            {/* <Route
               exact
               path="/show"
               render={props => {
@@ -100,12 +110,12 @@ class App extends Component {
                   <Name patient={this.state.patients}/>
                   <Conditions conditions={this.state.patients}/>
                   <Vaccinations vaccinations={this.state.patients}/>
+                  <DropDown user={this.state.user}/>
                   </div>
                 )
               }}
-            />
-            {/* <Route exact path="/resume" component={Resume} />
-            <Route exact path="/contact" component={Contact} /> */}
+            /> */}
+
         </Switch>
         {/* <LogIn /> */}
         {/* <Name patient={this.state.patients}/> */}

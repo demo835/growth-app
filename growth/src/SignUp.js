@@ -102,12 +102,13 @@ class SignUp extends Component {
                             
 
                             <div className="input-field col s6">
-                            <Link to="/signup/new">
-                                <a href="/signup/new"><button className="btn btn-large btn-register waves-effect waves-light" type="submit" name="action">Register
+                            {/* <Link to="/signup/new"> */}
+                                <a href="/signup">
+                                <button className="btn btn-large btn-register waves-effect waves-light" type="submit" name="action" form="reg-form">Register
                                 <i className="material-icons right">done</i>
                                 </button>
                                 </a>
-                            </Link>
+                            {/* </Link> */}
                             </div>
                         </div>
                         </form>
@@ -115,7 +116,7 @@ class SignUp extends Component {
                     </div>
                     </div>
                 </div>
-                <Link to="/"><a title="Login" className="ngl btn-floating btn-large waves-effect waves-light red"><i className="material-icons">input</i></a></Link>
+                {/* <Link to="/"><a title="Login" className="ngl btn-floating btn-large waves-effect waves-light red"><i className="material-icons">input</i></a></Link> */}
         </div>
 
         )

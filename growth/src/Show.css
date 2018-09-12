@@ -1,0 +1,24 @@
+.showContainer {
+    display: flex;
+  }
+  
+  /* .navContainer {
+    display: inline-block;
+    margin-top: 3%;
+    margin-left: 90%;
+  } */
+  
+  .rightContainer {
+    display: inline-block;
+    margin-top: 10%;
+    margin-left: 220%;
+    /* width: 20%; */
+    /* margin-left: 75%; */
+    /* margin-right: 5%; */
+  }
+  
+  .leftContainer {
+    display: inline-block;
+    margin-top: 10%;
+    margin-left: 10%;
+  }

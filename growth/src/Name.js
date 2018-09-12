@@ -7,7 +7,7 @@ export default class Name extends Component {
             <div className="card card1">
                 <div className="card-image waves-effect waves-block waves-light">
                     <div className="card-content">
-                    <span className="card-title activator grey-text text-darken-4">{this.props.patient.name}<i className="material-icons right">more_vert</i></span>
+                    <h4 className="card-title grey-text text-darken-4">{this.props.patient.name}</h4>
                     <p>Age: {this.props.patient.age} years old</p>
                     <p>Weight: {this.props.patient.weight} lbs.</p>
                     </div>
