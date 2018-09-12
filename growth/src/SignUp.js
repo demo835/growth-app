@@ -17,11 +17,20 @@ class SignUp extends Component {
     }
 
     onChange = e => {
-        const state = this.state;
-        state[e.target.name] = e.target.value;
-        this.setState(state);
+        // const state = this.state
+        // state[e.target.name] = e.target.value
+        // this.setState(state)
+
+        // const state = this.state
+        // console.log("e is", e)
+        // const tempE = e.target.name
+        // state.tempE = e.target.value
+        // this.setState(state)  
+        // console.log("this.state is", this.state)
+
+        this.setState({ [e.target.name]: e.target.value });
         console.log("this.state is", this.state)
-      };
+      }
     
       onSubmit = e => {
         console.log("submit clicked");
@@ -51,17 +60,17 @@ class SignUp extends Component {
                         <form id="reg-form" onSubmit={this.onSubmit}>
                         <div className="row">
                             <div className="input-field col s6">
-                            <input id="first_name" type="text" className="validate" onChange={this.onChange} required></input>
+                            <input id="first_name" name="firstName" type="text" className="validate" onChange={this.onChange} required></input>
                             <label htmlFor="first_name">First Name</label>
                             </div>
                             <div className="input-field col s6">
-                            <input id="last_name" type="text" className="validate" onChange={this.onChange} required></input>
+                            <input id="last_name" name="lastName" type="text" className="validate" onChange={this.onChange} required></input>
                             <label htmlFor="last_name">Last Name</label>
                             </div>
                         </div>
                         <div className="row">
                             <div className="input-field col s12">
-                                <input id="children" type="text" className="validate" onChange={this.onChange}required></input>
+                                <input id="children" name="children" type="text" className="validate" onChange={this.onChange}required></input>
                                 <label htmlFor="children">Children</label>
                             </div>
                             {/* <div class="input-field col s12">
@@ -71,11 +80,11 @@ class SignUp extends Component {
                         </div>
                         <div className="row">
                             <div className="input-field col s6">
-                            <input id="password1" type="password" className="validate" minLength="6" required></input>
+                            <input id="password1" name="password1" type="password" className="validate" minLength="6" required></input>
                             <label htmlFor="password">Password</label>
                             </div>
                             <div className="input-field col s6">
-                            <input id="password" type="password" className="validate" onChange={this.onChange} minLength="6" required></input>
+                            <input id="password" name="password" type="password" className="validate" onChange={this.onChange} minLength="6" required></input>
                             <label htmlFor="password">Re-enter Password</label>
                             </div>
                         </div>
@@ -93,9 +102,12 @@ class SignUp extends Component {
                             
 
                             <div className="input-field col s6">
-                            <Link to="/signup/new"><button className="btn btn-large btn-register waves-effect waves-light" type="submit" name="action">Register
+                            <Link to="/signup/new">
+                                <a href="/signup/new"><button className="btn btn-large btn-register waves-effect waves-light" type="submit" name="action">Register
                                 <i className="material-icons right">done</i>
-                            </button></Link>
+                                </button>
+                                </a>
+                            </Link>
                             </div>
                         </div>
                         </form>
