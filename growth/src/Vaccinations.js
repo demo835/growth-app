@@ -6,8 +6,8 @@ export default class Name extends Component {
     }
 
     render() {
-        let vaccinations = this.props.vaccinations.vaccinations.map(x => {
-            return (<p>{x.vaccine}</p>)
+        let vaccinations = this.props.vaccinations.vaccinations.map((data, i) => {
+            return (<p key={i}>{data.vaccine}</p>)
           })
 
         return (
