@@ -1,10 +1,6 @@
 import React, { Component } from 'react'
 import { 
-    BrowserRouter as Router,
-    Route, 
-    Link, 
-    Redirect, 
-    Switch }
+    Link }
     from "react-router-dom"
 import "./LogIn.css"
 

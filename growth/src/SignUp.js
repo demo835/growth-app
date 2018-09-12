@@ -1,10 +1,44 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
+import axios from 'axios'
 
 class SignUp extends Component {
     constructor() {
         super()
 
+        this.state = {
+            firstName: "",
+            lastName: "",
+            password: "",
+            email: "",
+            male: false,
+            children: "",
+    }
+    }
+
+    onChange = e => {
+        const state = this.state;
+        state[e.target.name] = e.target.value;
+        this.setState(state);
+        console.log("this.state is", this.state)
+      };
+    
+      onSubmit = e => {
+        console.log("submit clicked");
+        let data = JSON.stringify({
+          firstName: this.state.firstName,
+          lastName: this.state.lastName,
+          password: this.state.password,
+          email: this.state.email,
+          male: this.state.male,
+          children: this.state.children
+        })
+        console.log("data is", data)
+        axios.post("http://localhost:3001/signup/new", data, {
+          headers: {
+            "Content-Type": "application/json"
+          }
+        })
     }
 
     render() {
@@ -14,44 +48,53 @@ class SignUp extends Component {
                     <div className="col s12">
                     <div className="card">
                         <div className="card-content black-text">
-                        <form id="reg-form">
+                        <form id="reg-form" onSubmit={this.onSubmit}>
                         <div className="row">
                             <div className="input-field col s6">
-                            <input id="first_name" type="text" className="validate" required></input>
+                            <input id="first_name" type="text" className="validate" onChange={this.onChange} required></input>
                             <label htmlFor="first_name">First Name</label>
                             </div>
                             <div className="input-field col s6">
-                            <input id="last_name" type="text" className="validate" required></input>
+                            <input id="last_name" type="text" className="validate" onChange={this.onChange} required></input>
                             <label htmlFor="last_name">Last Name</label>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="input-field col s12">
+                        <div className="row">
+                            <div className="input-field col s12">
+                                <input id="children" type="text" className="validate" onChange={this.onChange}required></input>
+                                <label htmlFor="children">Children</label>
+                            </div>
+                            {/* <div class="input-field col s12">
                             <input id="email" type="email" class="validate" required></input>
                             <label for="email">Email</label>
+                            </div> */}
+                        </div>
+                        <div className="row">
+                            <div className="input-field col s6">
+                            <input id="password1" type="password" className="validate" minLength="6" required></input>
+                            <label htmlFor="password">Password</label>
+                            </div>
+                            <div className="input-field col s6">
+                            <input id="password" type="password" className="validate" onChange={this.onChange} minLength="6" required></input>
+                            <label htmlFor="password">Re-enter Password</label>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="input-field col s12">
-                            <input id="password" type="password" class="validate" minlength="6" required></input>
-                            <label for="password">Password</label>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="input-field col s6">
+                        <div className="row">
+                            {/* <div class="input-field col s6">
                             <div class="gender-male">
-                                <input class="with-gap" name="gender" type="radio" id="male" required></input>
+                                <input class="with-gap" name="gender" type="radio" id="male" reqsuired></input>
                                 <label for="male">Male</label>
                             </div>
                             <div class="gender-female">
                                 <input class="with-gap" name="gender" type="radio" id="female" required ></input>
                                 <label for="female">Female</label>
                             </div>
-                            </div>
+                            </div> */}
+                            
 
-                            <div class="input-field col s6">
-                            <Link to="/signup/new"><button class="btn btn-large btn-register waves-effect waves-light" type="submit" name="action">Register
-                                <i class="material-icons right">done</i>
+                            <div className="input-field col s6">
+                            <Link to="/signup/new"><button className="btn btn-large btn-register waves-effect waves-light" type="submit" name="action">Register
+                                <i className="material-icons right">done</i>
                             </button></Link>
                             </div>
                         </div>
@@ -60,7 +103,7 @@ class SignUp extends Component {
                     </div>
                     </div>
                 </div>
-                <Link to="/"><a title="Login" class="ngl btn-floating btn-large waves-effect waves-light red"><i class="material-icons">input</i></a></Link>
+                <Link to="/"><a title="Login" className="ngl btn-floating btn-large waves-effect waves-light red"><i className="material-icons">input</i></a></Link>
         </div>
 
         )

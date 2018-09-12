@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import axios from "axios";
 import { 
-  BrowserRouter as Router,
   Route, 
-  Link, 
   Redirect, 
   Switch }
   from "react-router-dom"
@@ -27,12 +25,12 @@ class App extends Component {
   componentDidMount() {
     console.log("componentWillMount")
     axios.get("http://localhost:3001/patients/5b97fecb281ffa2ead71e9b3").then(data => {
-      console.log("get event data from axios...");
-      console.log(data.data);
+      // console.log("get event data from axios...");
+      // console.log(data.data);
       this.setState({ patients: data.data });
-      console.log("inside componentwillmount App");
-      console.log("this.state.patients", this.state.patients);
-      console.log("this.state.patients.diagnosis", this.state.patients.diagnosis)
+      // console.log("inside componentwillmount App");
+      // console.log("this.state.patients", this.state.patients);
+      // console.log("this.state.patients.diagnosis", this.state.patients.diagnosis)
       // console.log(this.state.patients.diagnosis[0].condition)
 
     //   let elems = document.querySelectorAll('.fixed-action-btn');
@@ -44,7 +42,7 @@ class App extends Component {
     // console.log('instances', instances)
 
     var elem = document.querySelector('.collapsible')
-    console.log("collapsible", elem)
+    // console.log("collapsible", elem)
     var instance = M.Collapsible.init(elem)
     // .Collapsible.getInstance(elem);
     })
@@ -72,7 +70,7 @@ class App extends Component {
       // Render real UI ...
     //Your child currently does not have any conditions.
     //Your child has not received any vaccinations.
-    console.log("inside render", this.state.patients)
+    // console.log("inside render", this.state.patients)
     // // let conditions = this.state.patients.diagnosis.map(x => {
     // //   return (<p>{x.condition}</p>)
     // // })

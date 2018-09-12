@@ -1,9 +1,6 @@
 import React, { Component } from 'react'
 
 export default class Name extends Component {
-    constructor(props) {
-        super(props)
-    }
 
     render() {
         let vaccinations = this.props.vaccinations.vaccinations.map((data, i) => {
