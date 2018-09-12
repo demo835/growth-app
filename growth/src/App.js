@@ -12,6 +12,7 @@ import Name from "./Name"
 import Conditions from "./Conditions"
 import Vaccinations from "./Vaccinations"
 import LogIn from "./LogIn"
+import SignUp from "./SignUp"
 import './App.css';
 
 class App extends Component {
@@ -90,6 +91,7 @@ class App extends Component {
       <div className="App">
          <Switch>
             <Route exact path="/" component={LogIn} />
+            <Route exact path="/signup" component={SignUp} />
             {/* <Route exact path="/show" component={Name} /> */}
             <Route
               exact
