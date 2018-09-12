@@ -1,4 +1,11 @@
 import React, { Component } from 'react'
+import { 
+    BrowserRouter as Router,
+    Route, 
+    Link, 
+    Redirect, 
+    Switch }
+    from "react-router-dom"
 import "./LogIn.css"
 
 class LogIn extends Component {
@@ -37,8 +44,8 @@ class LogIn extends Component {
                     </div>
                     <div className="row">
                     <div className="input-field col s12">
-                        <a href="#" className="btn
-    waves-effect waves-light #ffeb3b yellow col s12">Login</a>
+                        <Link to="/show"><a href="#" className="btn
+    waves-effect waves-light #ffeb3b yellow col s12">Login</a></Link>
                     </div>
                     </div>
                     <div className="row">

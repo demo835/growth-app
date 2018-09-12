@@ -1,5 +1,12 @@
 import React, { Component } from 'react';
 import axios from "axios";
+import { 
+  BrowserRouter as Router,
+  Route, 
+  Link, 
+  Redirect, 
+  Switch }
+  from "react-router-dom"
 import M from "materialize-css/dist/js/materialize.min.js"
 import Name from "./Name"
 import Conditions from "./Conditions"
@@ -81,8 +88,26 @@ class App extends Component {
 
     return (
       <div className="App">
-
-        <LogIn />
+         <Switch>
+            <Route exact path="/" component={LogIn} />
+            {/* <Route exact path="/show" component={Name} /> */}
+            <Route
+              exact
+              path="/show"
+              render={props => {
+                return (
+                  <div>
+                  <Name patient={this.state.patients}/>
+                  <Conditions conditions={this.state.patients}/>
+                  <Vaccinations vaccinations={this.state.patients}/>
+                  </div>
+                )
+              }}
+            />
+            {/* <Route exact path="/resume" component={Resume} />
+            <Route exact path="/contact" component={Contact} /> */}
+        </Switch>
+        {/* <LogIn /> */}
         {/* <Name patient={this.state.patients}/> */}
           {/* <div className="card card1">
             <div className="card-image waves-effect waves-block waves-light">
