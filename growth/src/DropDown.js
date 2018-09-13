@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
 import M from "materialize-css/dist/js/materialize.min.js"
 import axios from 'axios'
+import { 
+    Link }
+    from "react-router-dom"
 
 class DropDown extends Component {
     constructor(props) {
@@ -28,21 +31,30 @@ class DropDown extends Component {
       }
     
     render() {
+        if (!this.props.user) {
+            return null
+        }
+        else {
+
         return (
             <div>
-                <a className='dropdown-trigger btn' href='#' data-target='dropdown1'>{this.props.user[0].firstName}</a>
+                <a className='dropdown-trigger btn' href='#' data-target='dropdown1'>
+                {/* Logged In */}
+                {this.props.user.firstName}
+                </a>
 
                 <ul id='dropdown1' className='dropdown-content'>
                     <li><a href="#!">Profile</a></li>
-                    <li><a href="#!" onClick={this.onSubmit}>Delete Account</a></li>
+                    <Link to="/"><li><a href="#!" onClick={this.onSubmit}>Delete Account</a></li></Link>
                     {/* <li><a href={`/user/delete/${this.props.user[0]._id}`} onClick={this.onSubmit}>Delete Account</a></li> */}
                     <li className="divider" tabIndex="-1"></li>
-                    <li><a href="#!">Log Out</a></li>
+                    <Link to="/"><li><a href="#!">Log Out</a></li></Link>
                     <li><a href="#!"><i className="material-icons">view_module</i>four</a></li>
                     <li><a href="#!"><i className="material-icons">cloud</i>five</a></li>
                 </ul>
             </div>
         )
+    }
     }
 }
 

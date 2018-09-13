@@ -17,7 +17,7 @@ class Show extends Component {
     }
 
     componentDidMount() {
-        console.log("componentWillMount")
+        console.log("componentDidMount in Show.js")
         axios.get("http://localhost:3001/patients/5b97fecb281ffa2ead71e9b3").then(data => {
           // console.log("get event data from axios...");
           // console.log(data.data);
@@ -26,17 +26,22 @@ class Show extends Component {
         })
     
         axios.get("http://localhost:3001/user").then(data2 => {
-          this.setState({ user: data2.data })
+            console.log("data2 is ", data2)
+          this.setState({ user: data2.data[0] })
         })
     }
 
     render() {
-
-        if ((!this.state.patient) || (!this.state.user)) {
+        if ((!this.state.patient) && (!this.state.user)) {
+            console.log("From Show IF. this.state.user is ", this.state.user)
+            console.log("From Show IF. this.state.patient is ", this.state.patient)
             return null
         }
         else
         {
+            console.log("From Show ELSE. Moving forward with render")
+            console.log("From Show ELSE. this.state.user is ", this.state.user)
+            console.log("From Show ELSE. this.state.patient is ", this.state.patient)
         return (
             <div className="showContainer">
                 {/* <nav className="navContainer">

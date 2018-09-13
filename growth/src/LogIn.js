@@ -5,9 +5,6 @@ import {
 import "./LogIn.css"
 
 class LogIn extends Component {
-    constructor() {
-        super()
-    }
 
     render() {
         return (
@@ -40,16 +37,18 @@ class LogIn extends Component {
                     </div>
                     <div className="row">
                     <div className="input-field col s12">
-                        <Link to="/show"><a href="#" className="btn
-    waves-effect waves-light #ffeb3b yellow col s12">Login</a></Link>
+                        <Link to="/show"><button className="btn
+    waves-effect waves-light #ffeb3b yellow col s12">Login</button></Link>
+                        {/* <Link to="/show"><a href="#" className="btn
+    waves-effect waves-light #ffeb3b yellow col s12">Login</a></Link> */}
                     </div>
                     </div>
                     <div className="row">
                     <div className="input-field col s6 m6 l6">
-                        <Link to="/signup"><p className="margin medium-small"><a href="#">Create Account!</a></p></Link>
+                        <Link to="/signup"><p className="margin medium-small">Create Account!</p></Link>
                     </div>
                     <div className="input-field col s6 m6 l6">
-                        <p className="margin right-align medium-small"><a href="#">Forgot password?</a></p>
+                        <p className="margin right-align medium-small"><a>Forgot password?</a></p>
                     </div>          
                     </div>
 

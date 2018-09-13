@@ -3,6 +3,10 @@ import React, { Component } from 'react'
 export default class Name extends Component {
 
     render() {
+        if (!this.props.patient) {
+            return null
+        }
+        else {
         return (
             <div className="card card1">
                 <div className="card-image waves-effect waves-block waves-light">
@@ -18,5 +22,6 @@ export default class Name extends Component {
                 </div>
             </div>
         )
+    }
     }
 }

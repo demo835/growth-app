@@ -20,7 +20,7 @@ class App extends Component {
     super();
 
     this.state = {
-      patients: null,
+      patient: null,
       user: null
     }
   }
@@ -30,7 +30,7 @@ class App extends Component {
     axios.get("http://localhost:3001/patients/5b97fecb281ffa2ead71e9b3").then(data => {
       // console.log("get event data from axios...");
       // console.log(data.data);
-      this.setState({ patients: data.data });
+      this.setState({ patient: data.data });
       // console.log("inside componentwillmount App");
       // console.log("this.state.patients", this.state.patients);
       // console.log("this.state.patients.diagnosis", this.state.patients.diagnosis)
@@ -70,31 +70,6 @@ class App extends Component {
 
   render() {
 
-    if (!this.state.patients) {
-      return null
-    }
-    else
-    {
-      // Render real UI ...
-    //Your child currently does not have any conditions.
-    //Your child has not received any vaccinations.
-    // console.log("inside render", this.state.patients)
-    // // let conditions = this.state.patients.diagnosis.map(x => {
-    // //   return (<p>{x.condition}</p>)
-    // // })
-    // let conditions = this.state.patients.diagnosis.map(x => {
-    //   return (<li>
-    //     <div className="collapsible-header"><i className="material-icons">filter_drama</i>{x.condition}</div>
-    //     <div className="collapsible-body"><span><a href="/conditions/update">Remove {x.condition}</a></span></div>
-    //   </li>)
-    // })
-    // console.log(conditions)
-    // let vaccinations = this.state.patients.vaccinations.map(x => {
-    //   return (<p>{x.vaccine}</p>)
-    // })
-
-      console.log("this.state.user is", this.state.user)
-
     return (
       <div className="App">
          <Switch>
@@ -104,7 +79,7 @@ class App extends Component {
               exact
               path="/show"
               render={props => {
-                return <Show {...props} />;
+                return <Show />;
               }}
             />
             {/* <Route exact path="/show" component={Show} /> */}
@@ -165,7 +140,6 @@ class App extends Component {
           </div> */}
     </div>
     )
-  }
 }
 }
 
