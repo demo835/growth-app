@@ -4,6 +4,7 @@ import Name from "./Name"
 import Conditions from "./Conditions"
 import Vaccinations from "./Vaccinations"
 import DropDown from "./DropDown"
+import boy from "./boy1.png"
 import "./Show.css"
 
 class Show extends Component {
@@ -48,24 +49,16 @@ class Show extends Component {
                     <DropDown user={this.state.user}/>
                 </div>
                 <div className="showContainer">
-                {/* <div className="row"> */}
-                    {/* <div className="col s12"> */}
-                        
-                    {/* </div> */}
-                {/* </div> */}
-                {/* <div className="row"> */}
-                    {/* // <div className="col s4"> */}
                         <div className="leftContainer">
                             <Name patient={this.state.patient}/>
                         </div>
-                    {/* </div> */}
-                    {/* // <div className="col s4"> */}
+                        <div className="middleContainer">
+                            <img className="childImage" src={boy}></img>
+                        </div>
                         <div className="rightContainer">
                             <Conditions conditions={this.state.patient}/>
                             <Vaccinations vaccinations={this.state.patient}/>
                         </div>
-                    {/* </div> */}
-                {/* </div> */}
                 </div>
             </div>
         )

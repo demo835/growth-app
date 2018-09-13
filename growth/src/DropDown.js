@@ -19,10 +19,10 @@ class DropDown extends Component {
         console.log("submit clicked");
         let data = JSON.stringify({
         //   _id: this.props.match.params.id
-        _id: this.props.user[0]._id
+        _id: this.props.user._id
         });
         console.log("data is ", data)
-        axios.delete(`http://localhost:3001/user/delete/${this.props.user[0]._id}`, data, {
+        axios.delete(`http://localhost:3001/user/delete/${this.props.user._id}`, data, {
           headers: {
             "Content-Type": "application/json"
           }
