@@ -2,23 +2,29 @@
     display: flex;
   }
   
-  /* .navContainer {
-    display: inline-block;
+  .navContainer {
+    display: block;
     margin-top: 3%;
-    margin-left: 90%;
-  } */
-  
-  .rightContainer {
-    display: inline-block;
-    margin-top: 10%;
-    margin-left: 220%;
-    /* width: 20%; */
-    /* margin-left: 75%; */
-    /* margin-right: 5%; */
+    /* margin-left: 220%; */
+    width: 100%
   }
   
   .leftContainer {
     display: inline-block;
     margin-top: 10%;
-    margin-left: 10%;
+    /* margin-left: 10%; */
+  }
+
+  .rightContainer {
+    display: inline-block;
+    margin-top: 10%;
+    /* margin-left: 220%; */
+    /* width: 20%; */
+    /* margin-left: 75%; */
+    /* margin-right: 5%; */
+  }
+
+  .dropdown-content {
+     left: -80%;
+     display: inline;
   }

@@ -4,15 +4,16 @@ import axios from 'axios'
 import { 
     Link }
     from "react-router-dom"
+import "./DropDown.css"
 
 class DropDown extends Component {
 
-    componentDidMount() {
-        var elems = document.querySelectorAll('.dropdown-trigger');
-        console.log("elems is ", elems)
-        // var instances = M.Dropdown.init(elems)
-        M.Dropdown.init(elems)
-    }
+    // componentDidMount() {
+    //     var elems = document.querySelectorAll('.dropdown-trigger');
+    //     console.log("elems is ", elems)
+    //     var instances = M.Dropdown.init(elems)
+    //     // M.Dropdown.init(elems)
+    // }
 
     onSubmit = e => {
         console.log("submit clicked");
@@ -34,6 +35,10 @@ class DropDown extends Component {
         }
         else {
 
+        var elems = document.querySelectorAll('.dropdown-trigger');
+        console.log("elems is ", elems)
+        var instances = M.Dropdown.init(elems)
+
         return (
             <div>
                 <a className='dropdown-trigger btn' href='#' data-target='dropdown1'>
@@ -47,8 +52,8 @@ class DropDown extends Component {
                     {/* <li><a href={`/user/delete/${this.props.user[0]._id}`} onClick={this.onSubmit}>Delete Account</a></li> */}
                     <li className="divider" tabIndex="-1"></li>
                     <Link to="/"><li><a href="#!">Log Out</a></li></Link>
-                    <li><a href="#!"><i className="material-icons">view_module</i>four</a></li>
-                    <li><a href="#!"><i className="material-icons">cloud</i>five</a></li>
+                    {/* <li><a href="#!"><i className="material-icons">view_module</i>four</a></li>
+                    <li><a href="#!"><i className="material-icons">cloud</i>five</a></li> */}
                 </ul>
             </div>
         )

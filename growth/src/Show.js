@@ -43,17 +43,29 @@ class Show extends Component {
             // console.log("From Show ELSE. this.state.user is ", this.state.user)
             // console.log("From Show ELSE. this.state.patient is ", this.state.patient)
         return (
-            <div className="showContainer">
-                {/* <nav className="navContainer">
+            <div className="pageContainer">
+                <div className="navContainer">
                     <DropDown user={this.state.user}/>
-                </nav> */}
-                <div className="leftContainer">
-                    <Name patient={this.state.patient}/>
                 </div>
-                <div className="rightContainer">
-                    <DropDown user={this.state.user}/>
-                    <Conditions conditions={this.state.patient}/>
-                    <Vaccinations vaccinations={this.state.patient}/>
+                <div className="showContainer">
+                {/* <div className="row"> */}
+                    {/* <div className="col s12"> */}
+                        
+                    {/* </div> */}
+                {/* </div> */}
+                {/* <div className="row"> */}
+                    {/* // <div className="col s4"> */}
+                        <div className="leftContainer">
+                            <Name patient={this.state.patient}/>
+                        </div>
+                    {/* </div> */}
+                    {/* // <div className="col s4"> */}
+                        <div className="rightContainer">
+                            <Conditions conditions={this.state.patient}/>
+                            <Vaccinations vaccinations={this.state.patient}/>
+                        </div>
+                    {/* </div> */}
+                {/* </div> */}
                 </div>
             </div>
         )

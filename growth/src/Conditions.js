@@ -12,8 +12,8 @@ export default class Conditions extends Component {
     }
 
     componentDidMount() {
-        var elems = document.querySelectorAll('.modal');
-        var instances = M.Modal.init(elems);
+        // var elems = document.querySelectorAll('.modal');
+        // var instances = M.Modal.init(elems);
     }
 
     onChange = e => {
@@ -51,6 +51,11 @@ export default class Conditions extends Component {
       };
 
     render() {
+      if(!this.props.conditions)
+      {
+        return null
+      }
+      else {
         let conditions = this.props.conditions.diagnosis.map((data, i) => {
             return (<li key={i}>
               <div className="collapsible-header"><i className="material-icons">filter_drama</i>{data.condition}</div>
@@ -58,6 +63,9 @@ export default class Conditions extends Component {
             </li>)
           })
           console.log(conditions)
+        
+        var elems = document.querySelectorAll('.modal');
+        var instances = M.Modal.init(elems);
 
         return (
             <div>
@@ -95,4 +103,5 @@ export default class Conditions extends Component {
         </div>
         )
     }
+  }
 }
