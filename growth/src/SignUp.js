@@ -48,7 +48,7 @@ class SignUp extends Component {
             "Content-Type": "application/json"
           }
         })
-        debugger
+        
     }
 
     render() {

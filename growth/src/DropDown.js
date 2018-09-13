@@ -42,7 +42,7 @@ class DropDown extends Component {
 
         return (
             <div>
-                <button className='dropdown-trigger btn' data-target='dropdown1'>
+                <button className='dropdown-trigger btn teal' data-target='dropdown1'>
                 {/* <a className='dropdown-trigger btn' href='#' data-target='dropdown1'> */}
                 {this.props.user.firstName}
                 {/* </a> */}
