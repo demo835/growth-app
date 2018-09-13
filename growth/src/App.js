@@ -23,7 +23,7 @@ class App extends Component {
 
   componentDidMount() {
     console.log("componentWillMount")
-    axios.get("http://localhost:3001/patients/5b97fecb281ffa2ead71e9b3").then(data => {
+    axios.get("https://growth-mb.herokuapp.com/patients/5b97fecb281ffa2ead71e9b3").then(data => {
       // console.log("get event data from axios...");
       // console.log(data.data);
       this.setState({ patient: data.data });
@@ -35,7 +35,7 @@ class App extends Component {
     
     })
 
-    axios.get("http://localhost:3001/user").then(data2 => {
+    axios.get("https://growth-mb.herokuapp.com/user").then(data2 => {
       this.setState({ user: data2.data })
     })
     //   let elems = document.querySelectorAll('.fixed-action-btn');

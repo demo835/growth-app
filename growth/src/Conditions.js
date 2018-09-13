@@ -41,7 +41,7 @@ export default class Conditions extends Component {
         });
         console.log("data is", data)
         axios.put(
-          `http://localhost:3001/conditions/update/${this.props.conditions._id}`,
+          `https://growth-mb.herokuapp.com/conditions/update/${this.props.conditions._id}`,
           data,
           {
             headers: {

@@ -22,7 +22,7 @@ class DropDown extends Component {
         _id: this.props.user._id
         });
         console.log("data is ", data)
-        axios.delete(`http://localhost:3001/user/delete/${this.props.user._id}`, data, {
+        axios.delete(`https://growth-mb.herokuapp.com/user/delete/${this.props.user._id}`, data, {
           headers: {
             "Content-Type": "application/json"
           }

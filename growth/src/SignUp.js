@@ -43,7 +43,7 @@ class SignUp extends Component {
           children: this.state.children
         })
         console.log("data is", data)
-        axios.post("http://localhost:3001/signup/new", data, {
+        axios.post("https://growth-mb.herokuapp.com/signup/new", data, {
           headers: {
             "Content-Type": "application/json"
           }

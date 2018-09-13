@@ -19,14 +19,14 @@ class Show extends Component {
 
     componentDidMount() {
         console.log("componentDidMount in Show.js")
-        axios.get("http://localhost:3001/patients/5b97fecb281ffa2ead71e9b3").then(data => {
+        axios.get("https://growth-mb.herokuapp.com/patients/5b97fecb281ffa2ead71e9b3").then(data => {
           // console.log("get event data from axios...");
           // console.log(data.data);
           this.setState({ patient: data.data });
           // console.log("inside componentwillmount App");
         })
     
-        axios.get("http://localhost:3001/user").then(data2 => {
+        axios.get("https://growth-mb.herokuapp.com/user").then(data2 => {
             console.log("data2 is ", data2)
           this.setState({ user: data2.data[0] })
         })
