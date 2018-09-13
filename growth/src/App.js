@@ -6,12 +6,8 @@ import {
   Switch }
   from "react-router-dom"
 import M from "materialize-css/dist/js/materialize.min.js"
-import Name from "./Name"
-import Conditions from "./Conditions"
-import Vaccinations from "./Vaccinations"
 import LogIn from "./LogIn"
 import SignUp from "./SignUp"
-import DropDown from "./DropDown"
 import Show from "./Show"
 import './App.css';
 

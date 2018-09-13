@@ -33,15 +33,15 @@ class Show extends Component {
 
     render() {
         if ((!this.state.patient) && (!this.state.user)) {
-            console.log("From Show IF. this.state.user is ", this.state.user)
-            console.log("From Show IF. this.state.patient is ", this.state.patient)
+            // console.log("From Show IF. this.state.user is ", this.state.user)
+            // console.log("From Show IF. this.state.patient is ", this.state.patient)
             return null
         }
         else
         {
-            console.log("From Show ELSE. Moving forward with render")
-            console.log("From Show ELSE. this.state.user is ", this.state.user)
-            console.log("From Show ELSE. this.state.patient is ", this.state.patient)
+            // console.log("From Show ELSE. Moving forward with render")
+            // console.log("From Show ELSE. this.state.user is ", this.state.user)
+            // console.log("From Show ELSE. this.state.patient is ", this.state.patient)
         return (
             <div className="showContainer">
                 {/* <nav className="navContainer">

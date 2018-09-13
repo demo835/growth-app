@@ -6,14 +6,12 @@ import {
     from "react-router-dom"
 
 class DropDown extends Component {
-    constructor(props) {
-        super(props)
-    }
 
     componentDidMount() {
         var elems = document.querySelectorAll('.dropdown-trigger');
         console.log("elems is ", elems)
-        var instances = M.Dropdown.init(elems);
+        // var instances = M.Dropdown.init(elems)
+        M.Dropdown.init(elems)
     }
 
     onSubmit = e => {
