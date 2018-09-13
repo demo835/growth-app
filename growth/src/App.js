@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import axios from "axios";
 import { 
-  Route, 
-  Redirect, 
+  Route,
   Switch }
   from "react-router-dom"
 import M from "materialize-css/dist/js/materialize.min.js"
@@ -23,10 +22,10 @@ class App extends Component {
 
   componentDidMount() {
     console.log("componentWillMount")
-    axios.get("https://growth-mb.herokuapp.com/patients/5b97fecb281ffa2ead71e9b3").then(data => {
+    axios.get("https://growth-mb.herokuapp.com/patients").then(data => {
       // console.log("get event data from axios...");
       // console.log(data.data);
-      this.setState({ patient: data.data });
+      this.setState({ patient: data.data[0] });
       // console.log("inside componentwillmount App");
       // console.log("this.state.patients", this.state.patients);
       // console.log("this.state.patients.diagnosis", this.state.patients.diagnosis)
@@ -48,7 +47,8 @@ class App extends Component {
 
     var elem = document.querySelector('.collapsible')
     // console.log("collapsible", elem)
-    var instance = M.Collapsible.init(elem)
+    M.Collapsible.init(elem)
+    // var instance = M.Collapsible.init(elem)
     // .Collapsible.getInstance(elem);
   }
 

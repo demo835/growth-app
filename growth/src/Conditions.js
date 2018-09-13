@@ -3,7 +3,7 @@ import M from "materialize-css/dist/js/materialize.min.js"
 import axios from 'axios'
 import "./Conditions.css"
 
-export default class Conditions extends Component {
+class Conditions extends Component {
     constructor(props) {
         super(props)
 
@@ -14,7 +14,7 @@ export default class Conditions extends Component {
 
     componentDidMount() {
         var elems = document.querySelectorAll('.modal');
-        var instances = M.Modal.init(elems);
+        M.Modal.init(elems);
     }
 
     onChange = e => {
@@ -106,3 +106,5 @@ export default class Conditions extends Component {
     }
   }
 }
+
+export default Conditions

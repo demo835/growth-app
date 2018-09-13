@@ -19,10 +19,11 @@ class Show extends Component {
 
     componentDidMount() {
         console.log("componentDidMount in Show.js")
-        axios.get("https://growth-mb.herokuapp.com/patients/5b97fecb281ffa2ead71e9b3").then(data => {
+        axios.get("https://growth-mb.herokuapp.com/patients").then(data => {
           // console.log("get event data from axios...");
           // console.log(data.data);
-          this.setState({ patient: data.data });
+          console.log("data is", data)
+          this.setState({ patient: data.data[0] });
           // console.log("inside componentwillmount App");
         })
     
@@ -53,7 +54,7 @@ class Show extends Component {
                             <Name patient={this.state.patient}/>
                         </div>
                         <div className="middleContainer">
-                            <img className="childImage" src={boy}></img>
+                            <img className="childImage" src={boy} alt="boy"></img>
                         </div>
                         <div className="rightContainer">
                             <Conditions conditions={this.state.patient}/>

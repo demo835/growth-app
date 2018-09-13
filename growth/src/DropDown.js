@@ -38,21 +38,22 @@ class DropDown extends Component {
         var elems = document.querySelectorAll('.dropdown-trigger');
         console.log("elems is ", elems)
         // var instances = M.Dropdown.init(elems)
-        var instances = M.Dropdown.init(elems)
+        M.Dropdown.init(elems)
 
         return (
             <div>
-                <a className='dropdown-trigger btn' href='#' data-target='dropdown1'>
-                {/* Logged In */}
+                <button className='dropdown-trigger btn' data-target='dropdown1'>
+                {/* <a className='dropdown-trigger btn' href='#' data-target='dropdown1'> */}
                 {this.props.user.firstName}
-                </a>
+                {/* </a> */}
+                </button>
 
                 <ul id='dropdown1' className='dropdown-content'>
-                    <li><a href="#!">Profile</a></li>
-                    <Link to="/"><li><a href="#!" onClick={this.onSubmit}>Delete Account</a></li></Link>
+                    <li><p className="dropdown-p">Profile</p></li>
+                    <Link to="/"><li><p className="dropdown-p" onClick={this.onSubmit}>Delete Account</p></li></Link>
                     {/* <li><a href={`/user/delete/${this.props.user[0]._id}`} onClick={this.onSubmit}>Delete Account</a></li> */}
                     <li className="divider" tabIndex="-1"></li>
-                    <Link to="/"><li><a href="#!">Log Out</a></li></Link>
+                    <Link to="/"><li><p className="dropdown-p">Log Out</p></li></Link>
                     {/* <li><a href="#!"><i className="material-icons">view_module</i>four</a></li>
                     <li><a href="#!"><i className="material-icons">cloud</i>five</a></li> */}
                 </ul>
