@@ -13,8 +13,8 @@ export default class Conditions extends Component {
     }
 
     componentDidMount() {
-        // var elems = document.querySelectorAll('.modal');
-        // var instances = M.Modal.init(elems);
+        var elems = document.querySelectorAll('.modal');
+        var instances = M.Modal.init(elems);
     }
 
     onChange = e => {
@@ -65,8 +65,8 @@ export default class Conditions extends Component {
           })
           console.log(conditions)
         
-        var elems = document.querySelectorAll('.modal');
-        var instances = M.Modal.init(elems);
+        // var elems = document.querySelectorAll('.modal');
+        // var instances = M.Modal.init(elems);
 
         return (
             <div>
