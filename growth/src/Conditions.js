@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import M from "materialize-css/dist/js/materialize.min.js"
 import axios from 'axios'
+import "./Conditions.css"
 
 export default class Conditions extends Component {
     constructor(props) {

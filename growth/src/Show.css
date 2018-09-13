@@ -20,7 +20,7 @@
 
   .middleContainer {
       margin-left: 10%;
-      width: 800px;
+      width: 775px;
   }
 
   .childImage {
@@ -39,6 +39,6 @@
   }
 
   .dropdown-content {
-     left: -80%;
-     display: inline;
+     /* left: -80%; */
+     /* display: inline; */
   }

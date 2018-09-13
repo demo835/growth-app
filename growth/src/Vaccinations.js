@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import "./Vaccinations.css"
 
 export default class Name extends Component {
 

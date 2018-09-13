@@ -37,6 +37,7 @@ class DropDown extends Component {
 
         var elems = document.querySelectorAll('.dropdown-trigger');
         console.log("elems is ", elems)
+        // var instances = M.Dropdown.init(elems)
         var instances = M.Dropdown.init(elems)
 
         return (
