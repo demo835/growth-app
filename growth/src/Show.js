@@ -34,7 +34,7 @@ class Show extends Component {
     }
 
     render() {
-        if (!this.state.patient || !this.state.user) {
+        if (!this.state.patient && !this.state.user) {
             // console.log("From Show IF. this.state.user is ", this.state.user)
             // console.log("From Show IF. this.state.patient is ", this.state.patient)
             return null
