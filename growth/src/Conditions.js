@@ -38,6 +38,10 @@ class Conditions extends Component {
         console.log("this.state.condition is", this.state.condition)
       }
 
+      onCancel = (e) => {
+        e.preventDefault()
+      }
+
       onSubmit = e => {
         console.log("submit clicked")
         let data = JSON.stringify({
@@ -101,7 +105,7 @@ class Conditions extends Component {
                    
                         <div className="modal-footer">
                             <button type="submit"><a className="modal-close waves-effect waves-green btn-flat">Create</a></button>
-                            <button><a className="modal-close waves-effect waves-green btn-flat">Cancel</a></button>
+                            <button onClick={this.onCancel} className="modal-close waves-effect waves-green btn-flat">Cancel</button>
                          </div>
                     </form>
                 </div>
