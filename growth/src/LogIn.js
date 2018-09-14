@@ -8,9 +8,13 @@ class LogIn extends Component {
 
     render() {
         return (
-            <div id="login-page" className="row">
+            // <div>
+                <div id="login-page" className="row">
+                {/* <div className=""> */}
+                    <h2 className="font">| Growth |</h2>
+                {/* </div> */}
                 {/* <img src="../../public/images/beach-children-family.jpg" </img> */}
-                <div className="col s12 z-depth-6 card-panel">
+                <div className=" z-depth-6 card-panel">
                 <form className="login-form">
                     
                     <div className="row">
@@ -38,23 +42,24 @@ class LogIn extends Component {
                     <div className="row">
                     <div className="input-field col s12">
                         <Link to="/show"><button className="btn
-    waves-effect waves-light #ffeb3b yellow col s12">Login</button></Link>
+    waves-effect waves-light #ffeb3b red col s12">Login</button></Link>
                         {/* <Link to="/show"><a href="#" className="btn
     waves-effect waves-light #ffeb3b yellow col s12">Login</a></Link> */}
                     </div>
                     </div>
                     <div className="row">
                     <div className="input-field col s6 m6 l6">
-                        <Link to="/signup"><p className="margin medium-small">Create Account!</p></Link>
+                        <Link to="/signup"><p className="margin medium-small links">Create Account!</p></Link>
                     </div>
                     <div className="input-field col s6 m6 l6">
-                        <p className="margin right-align medium-small"><a>Forgot password?</a></p>
+                        <p className="margin right-align medium-small links">Forgot password?</p>
                     </div>          
                     </div>
 
                 </form>
             </div>
         </div>
+        // </div>
         )
     }
 }

@@ -13,9 +13,14 @@ class Conditions extends Component {
     }
 
     componentDidMount() {
-        var elems = document.querySelectorAll('.modal');
+        var elems = document.querySelectorAll('.modal')
         M.Modal.init(elems);
     }
+
+    // componentWillUnmount() {
+    //   var elems = document.querySelectorAll('.modal')
+    //   M.Modal.init(elems);
+    // }
 
     onChange = e => {
         const state = this.state;
@@ -64,9 +69,9 @@ class Conditions extends Component {
             </li>)
           })
           console.log(conditions)
-        
-        // var elems = document.querySelectorAll('.modal');
-        // var instances = M.Modal.init(elems);
+
+        // var elems = document.querySelectorAll('.modal')
+        // M.Modal.init(elems);
 
         return (
             <div>
@@ -95,8 +100,8 @@ class Conditions extends Component {
                         </div>
                    
                         <div className="modal-footer">
-                            <a href="#!" className="modal-close waves-effect waves-green btn-flat">Cancel</a>
                             <button type="submit"><a className="modal-close waves-effect waves-green btn-flat">Create</a></button>
+                            <button><a className="modal-close waves-effect waves-green btn-flat">Cancel</a></button>
                          </div>
                     </form>
                 </div>

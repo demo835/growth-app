@@ -1,4 +1,27 @@
+@font-face {
+    font-family: garden;
+    src: url(grandmas-garden.ttf);
+}
+
+.font {
+    font-family: garden;
+    width: 350px;
+    text-align: center;
+    margin-bottom: 5%;
+    color: green;
+    font-weight: 550;
+}
+
 #login-page {
-    margin-top: 8%;
-    width: 30%;
+    margin-top: 2%;
+    width: 100%;
+    margin-left: 38%;
+}
+
+.card-panel {
+    width: 350px;
+}
+
+.links {
+    color: #e57373;
 }

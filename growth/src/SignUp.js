@@ -105,7 +105,7 @@ class SignUp extends Component {
                             <div className="input-field col s6">
                             <Link to="/show">
                                 {/* <a href="/signup"> */}
-                                <button className="btn btn-large btn-register waves-effect waves-light" type="submit" name="action" form="reg-form" onClick={this.onSubmit}>Register
+                                <button className="btn btn-large btn-register waves-effect waves-light red" type="submit" name="action" form="reg-form" onClick={this.onSubmit}>Register
                                 <i className="material-icons right">done</i>
                                 </button>
                                 {/* </a> */}

@@ -34,7 +34,7 @@ class Show extends Component {
     }
 
     render() {
-        if ((!this.state.patient) && (!this.state.user)) {
+        if (!this.state.patient || !this.state.user) {
             // console.log("From Show IF. this.state.user is ", this.state.user)
             // console.log("From Show IF. this.state.patient is ", this.state.patient)
             return null
@@ -51,7 +51,7 @@ class Show extends Component {
                 </div>
                 <div className="showContainer">
                         <div className="leftContainer">
-                            <Name patient={this.state.patient}/>
+                            <Name user={this.state.user} patient={this.state.patient}/>
                         </div>
                         <div className="middleContainer">
                             <img className="childImage" src={boy} alt="boy"></img>
@@ -61,6 +61,7 @@ class Show extends Component {
                             <Vaccinations vaccinations={this.state.patient}/>
                         </div>
                 </div>
+                {/* <p>Growth   Privacy Policy  Terms of Use</p> */}
             </div>
         )
         }

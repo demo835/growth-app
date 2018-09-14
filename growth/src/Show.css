@@ -1,4 +1,8 @@
 
+.pageContainer {
+  width: 100%;
+  height: 100%;
+}
   
   .navContainer {
     display: block;
@@ -20,7 +24,7 @@
 
   .middleContainer {
       margin-left: 10%;
-      width: 775px;
+      width: 500px;
   }
 
   .childImage {
@@ -42,3 +46,7 @@
      /* left: -80%; */
      /* display: inline; */
   }
+
+p {
+  /* margin-bottom: 80%; */
+}
