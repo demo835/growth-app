@@ -77,6 +77,12 @@ class App extends Component {
                 return <Show />;
               }}
             />
+            <Route
+              path="/show?"
+              render={props => {
+                return <Show />;
+              }}
+            />
             {/* <Route exact path="/show" component={Show} /> */}
             {/* <Route
               exact
