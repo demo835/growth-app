@@ -34,13 +34,21 @@ class Show extends Component {
     }
 
     render() {
+        // If we have neither data
         if (!this.state.patient && !this.state.user) {
-            // console.log("From Show IF. this.state.user is ", this.state.user)
-            // console.log("From Show IF. this.state.patient is ", this.state.patient)
             return null
         }
-        else
-        {
+        else if (this.state.patient && !this.state.user) {
+            let that = this
+            setTimeout(function(){ 
+                axios.get("https://growth-mb.herokuapp.com/user").then(data2 => {
+                console.log("In timeout backup. data2 is ", data2)
+                that.setState({ user: data2.data[0] })
+            }, 1000)
+            })
+            return null
+        }
+        else {
             // console.log("From Show ELSE. Moving forward with render")
             // console.log("From Show ELSE. this.state.user is ", this.state.user)
             // console.log("From Show ELSE. this.state.patient is ", this.state.patient)
